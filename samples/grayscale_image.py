@@ -17,7 +17,7 @@ data = image.imread(filename)
 
 # Display image information
 print('Image type is: ', type(data))
-print('Image shape is: ', data.shape)
+print('Image shape is: ', data.shape) # Color iamgge variable: data = image.imread(filename)
 
 # Add some color boundaries to modify an image array
 plot_data = np.ndarray([512,512])
@@ -27,8 +27,8 @@ for width in range(512):
         R = data[height,width,0]    # data[height, width, :] = [R, G, B]
         G = data[height,width,1]
         B = data[height,width,2]
-        plot_data[height][width] = int(0.3*R + 0.59*G + 0.11*B)
+        plot_data[height][width] = int(0.3*R + 0.59*G + 0.11*B) # gray = int(0.3*R + 0.59*G + 0.11*B)
 
 # use pyplot to plot the image
-pyplot.imshow(plot_data, cmap = 'gray', vmin = 0, vmax = 255)
+pyplot.imshow(plot_data, cmap = 'gray', vmin = 0, vmax = 255) # when using pyplot.imshow, need to specify color amp as: cmap = 'gray'
 pyplot.show()
