@@ -20,7 +20,7 @@ plt.plot(x, y, 'gray', linewidth = 3)
 # Generate noisy sample
 sample_count = 100
 x_sample = 10*np.random.random(sample_count)-5
-y_sample = 2*x_sample - 1 + np.random.normal(0, 1.0, sample_count)
+y_sample = 2*x_sample - 1 + np.random.normal(0, 1.0, sample_count) #synthesize noisy data from the model: y = 2x -1
 # Try some colormaps: hsv, gray, pink, cool, hot
 ax1.scatter(x_sample, y_sample, c = x_sample, cmap = 'hsv')
 
