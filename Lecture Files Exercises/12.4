@@ -1,0 +1,31 @@
+import numpy as np
+
+def swap_rows(M, a, b):
+    """
+    Swaps the a-th row and b-th row of the matrix M.
+    
+    Parameters:
+    M (numpy.ndarray): The matrix in which the rows are to be swapped.
+    a (int): The index of the first row to swap.
+    b (int): The index of the second row to swap.
+    
+    Returns:
+    numpy.ndarray: The matrix with the rows swapped.
+    """
+    M[[a, b], :] = M[[b, a], :]
+    return M
+
+def swap_cols(M, a, b):
+    """
+    Swaps the a-th column and b-th column of the matrix M.
+    
+    Parameters:
+    M (numpy.ndarray): The matrix in which the columns are to be swapped.
+    a (int): The index of the first column to swap.
+    b (int): The index of the second column to swap.
+    
+    Returns:
+    numpy.ndarray: The matrix with the columns swapped.
+    """
+    M[:, [a, b]] = M[:, [b, a]]
+    return M
